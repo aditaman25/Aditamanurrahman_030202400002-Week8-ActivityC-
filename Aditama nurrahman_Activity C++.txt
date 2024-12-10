@@ -1,0 +1,111 @@
+Activity 1.
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Car {
+private:
+    string brand;
+    string model;
+    int year;
+    int cc;
+
+public:
+    // Constructor
+    Car(string b, string m, int y, int c) {
+        brand = b;
+        model = m;
+        year = y;
+        cc = c;
+    }
+
+    void displayInfo() {
+        cout << "Detail Mobil:" << endl;
+        cout << "Mrek: " << brand << endl;
+        cout << "Model: " << model << endl;
+        cout << "Tahun: " << year << endl;
+        cout << "Cc: " << cc << " cc" << endl;
+    }
+};
+
+int main() {
+    
+    Car mobil("Toyota", "Camry", 2021, 2500);
+    mobil.displayInfo();
+
+    return 0;
+}
+
+Activity 2.
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Book {
+public:
+    string title;
+    string author;
+    double price;
+
+    Book(string t, string a, double p) {
+        title = t;
+        author = a;
+        price = p;
+    }
+
+    void displayDetails() {
+        cout << "Title: " << title << endl;
+        cout << "Author: " << author << endl;
+        cout << "Price: Rp" << price << endl << endl;
+    }
+};
+
+int main() {
+    
+    Book book1("Misteri Sebuah Peti Mati", "Abdullah Harahap", 25000);
+    Book book2("Menembus Impian", "Abidah El Khalieqy", 25000);
+
+    book1.displayDetails();
+    book2.displayDetails();
+
+    return 0;
+}
+
+Activity 3.
+#include <iostream>
+using namespace std;
+
+class Rectangle {
+private:
+    double length;
+    double width;
+
+public:
+    // Constructor
+    Rectangle() {
+        length = 0;
+        width = 0;
+    }
+
+    void setDimensions(double l, double w) {
+        length = l;
+        width = w;
+    }
+    
+    double calculateArea() {
+        return length * width;
+    }
+
+    void displayArea() {
+        cout << "Luas Persegi Panjang: " << calculateArea() << endl;
+    }
+};
+
+int main() {
+    Rectangle persegi;
+    persegi.setDimensions(5.0, 3.0);
+    persegi.displayArea();
+
+    return 0;
+}
